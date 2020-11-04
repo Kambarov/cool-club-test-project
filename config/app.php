@@ -2,6 +2,8 @@
 
 return [
 
+    'fixed_email' => env('FIXED_EMAIL', 'Kambarov0209@gmail.com'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
