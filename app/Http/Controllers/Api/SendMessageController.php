@@ -26,7 +26,7 @@ class SendMessageController extends Controller
     {
         $message = $this->service->store($request->validated());
 
-        Notification::route('mail', 'Kambarov0209@gmail.com')
+        Notification::route('mail', config('app.fixed_email'))
             ->notify(new SendMessageToEmail($message->content));
 
         return (new MessageResource($message))
